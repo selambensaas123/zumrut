@@ -603,7 +603,7 @@
                      { file: "sarki1.mp3", title: "Bizim Şarkımız ❤️" }
                     ];
                         let index = 0;
-                        function srcFor(name){ return '../playlist/' + encodeURIComponent(name); }
+                        function srcFor(name){ return '/zumrut/playlist/' + encodeURIComponent(name);}
                         function fmt(t){ if(!isFinite(t)) return '0:00'; const m=Math.floor(t/60), s=Math.floor(t%60); return m+":"+(s<10?'0'+s:s); }
                         function setIconPlaying(isPlaying){
                             playBtn.innerHTML = isPlaying ? '<i class="ri-pause-fill"></i>' : '<i class="ri-play-fill"></i>';
@@ -1182,4 +1182,5 @@
         document.addEventListener('scroll', onScroll, { passive: true });
     </script>
 </body>
+
 </html>
