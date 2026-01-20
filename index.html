@@ -1,0 +1,1185 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aşkımızın Hikayesi</title>
+    <meta name="description" content="Aşkımızın hikayesini, hayallerimizi ve anılarımızı anlatan özel bir sayfa." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preload" as="image" href="./webp/1.webp" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="prefetch" href="./webp/2.webp" as="image">
+    <link rel="prefetch" href="./webp/3.webp" as="image">
+    <meta property="og:title" content="Aşkımızın Hikayesi" />
+    <meta property="og:description" content="Aşkımızın hikayesini, hayallerimizi ve anılarımızı anlatan özel bir sayfa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://readdy.ai/api/search-image?query=romantic%20luxury%20gradient%20heart&width=1200&height=630&orientation=landscape" />
+    <meta name="theme-color" content="#e11d48" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e11d48',
+                        secondary: '#f472b6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '8px',
+                        DEFAULT: '12px',
+                        'md': '16px',
+                        'lg': '20px',
+                        'xl': '24px',
+                        '2xl': '28px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '12px'
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+    /* Remix Icon default content rule removed to prevent icon conflicts */
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 100%);
+        }
+        
+        .heart-beat {
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(-2deg); }
+            50% { transform: scale(1.2) rotate(2deg); }
+            75% { transform: scale(1.1) rotate(-1deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .sparkle {
+            animation: sparkle 3s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1) rotate(180deg); }
+        }
+        
+        .glow {
+            box-shadow: 0 0 30px rgba(225, 29, 72, 0.5), 0 0 60px rgba(225, 29, 72, 0.3);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .parallax {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+        }
+        
+        .shimmer {
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+            background-size: 200% 200%;
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% -200%; }
+            100% { background-position: 200% 200%; }
+        }
+        
+        .love-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            color: #e11d48;
+            animation: particleFloat 8s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .photo-hover {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+            z-index: 1;
+        }
+        
+        .photo-hover:hover::before {
+            left: 100%;
+        }
+        
+        .photo-hover:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .luxury-text {
+            background: linear-gradient(135deg, #e11d48, #f472b6, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .infinite-scroll {
+            animation: infiniteScroll 30s linear infinite;
+        }
+        
+        @keyframes infiniteScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Romantic Space Background (global) */
+        .space-bg { position: fixed; inset: 0; z-index: -50; pointer-events: none; overflow: hidden; }
+        .space-bg { 
+            background:
+                /* Nebula glows */
+                radial-gradient(1200px 800px at 15% 12%, rgba(244, 114, 182, 0.12), transparent 60%),
+                radial-gradient(1000px 700px at 85% 20%, rgba(236, 72, 153, 0.12), transparent 60%),
+                radial-gradient(900px 700px at 75% 80%, rgba(59, 130, 246, 0.10), transparent 60%),
+                radial-gradient(900px 700px at 10% 85%, rgba(168, 85, 247, 0.12), transparent 60%),
+                /* Subtle vignette */
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.0) 70%),
+                /* Base deep space */
+                linear-gradient(180deg, #09091a 0%, #0b1023 50%, #09091a 100%);
+            filter: saturate(1.05);
+        }
+    /* Starfields */
+        .space-bg::before, .space-bg::after { content:""; position:absolute; inset:0; }
+        .space-bg::before {
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent 60%),
+                radial-gradient(1.5px 1.5px at 120px 80px, rgba(255,255,255,0.85), transparent 60%),
+                radial-gradient(1px 1px at 50px 150px, rgba(255,255,255,0.75), transparent 60%),
+                radial-gradient(1.8px 1.8px at 180px 200px, rgba(255,255,255,0.9), transparent 60%);
+            background-size: 220px 220px, 300px 300px, 260px 260px, 340px 340px; 
+            background-repeat: repeat; opacity:.9; animation: driftStars1 160s linear infinite;
+        }
+        .space-bg::after {
+            background-image:
+                radial-gradient(1.2px 1.2px at 70px 40px, rgba(255,255,255,0.7), transparent 60%),
+                radial-gradient(1px 1px at 200px 90px, rgba(255,255,255,0.6), transparent 60%),
+                radial-gradient(1.4px 1.4px at 140px 160px, rgba(255,255,255,0.7), transparent 60%);
+            background-size: 260px 260px, 320px 320px, 380px 380px; 
+            background-repeat: repeat; opacity:.7; animation: driftStars2 220s linear infinite;
+        }
+        @keyframes driftStars1 { from { transform: translate3d(0,0,0); } to { transform: translate3d(-200px,-120px,0); } }
+        @keyframes driftStars2 { from { transform: translate3d(0,0,0); } to { transform: translate3d(220px,-160px,0); } }
+        /* Planets (soft, romantic) */
+        .space-bg .planet { position:absolute; border-radius:50%; opacity:.18; filter: drop-shadow(0 0 30px rgba(244,114,182,0.35)); mix-blend-mode: screen; }
+        .space-bg .planet-1 { width:340px; height:340px; left:-80px; top:10%; background: radial-gradient(circle at 32% 30%, rgba(255,255,255,.9), rgba(244,114,182,.45) 40%, rgba(236,72,153,.25) 58%, rgba(0,0,0,0) 66%); animation: planetFloat1 40s ease-in-out infinite alternate; }
+        .space-bg .planet-2 { width:280px; height:280px; right:-60px; top:55%; background: radial-gradient(circle at 38% 35%, rgba(255,255,255,.85), rgba(168,85,247,.45) 42%, rgba(59,130,246,.25) 60%, rgba(0,0,0,0) 70%); animation: planetFloat2 50s ease-in-out infinite alternate; }
+        .space-bg .planet-3 { width:180px; height:180px; left:55%; top:8%; transform:translateX(-50%); background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.85), rgba(236,72,153,.40) 45%, rgba(251,191,36,.18) 60%, rgba(0,0,0,0) 70%); animation: planetFloat3 60s ease-in-out infinite alternate; }
+        @keyframes planetFloat1 { from { transform: translateY(0); } to { transform: translateY(-24px); } }
+        @keyframes planetFloat2 { from { transform: translateY(0); } to { transform: translateY(20px); } }
+        @keyframes planetFloat3 { from { transform: translate(-50%,0); } to { transform: translate(-50%,-18px); } }
+        /* Twinkle layer */
+        .space-bg .twinkle { position:absolute; inset:0; opacity:.35; animation: twinkle 4.5s ease-in-out infinite alternate; }
+        .space-bg .twinkle { background-image:
+            radial-gradient(1.2px 1.2px at 12% 22%, rgba(255,255,255,.95), transparent 60%),
+            radial-gradient(1.4px 1.4px at 32% 18%, rgba(255,255,255,.85), transparent 60%),
+            radial-gradient(1.2px 1.2px at 58% 28%, rgba(255,255,255,.9), transparent 60%),
+            radial-gradient(1.4px 1.4px at 78% 14%, rgba(255,255,255,.85), transparent 60%),
+            radial-gradient(1.2px 1.2px at 20% 72%, rgba(255,255,255,.9), transparent 60%),
+            radial-gradient(1.4px 1.4px at 46% 68%, rgba(255,255,255,.85), transparent 60%),
+            radial-gradient(1.2px 1.2px at 70% 78%, rgba(255,255,255,.9), transparent 60%),
+            radial-gradient(1.4px 1.4px at 88% 62%, rgba(255,255,255,.85), transparent 60%);
+        }
+        @keyframes twinkle { from { opacity:.25; } to { opacity:.55; } }
+        /* Shooting star */
+        .space-bg .shooting-star { position:absolute; left:-10vw; top:15%; width:160px; height:2px; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.95), rgba(255,255,255,0)); filter: drop-shadow(0 0 10px rgba(255,255,255,.8)); transform: rotate(18deg); animation: shoot 9s linear infinite; opacity:0; }
+        .space-bg .shooting-star.alt { top:70%; transform: rotate(200deg); animation-duration: 12s; animation-delay: 4s; }
+        @keyframes shoot { 0% { opacity:0; transform: translateX(0) translateY(0) rotate(18deg);} 8% { opacity:1; } 45% { transform: translateX(120vw) translateY(40vh) rotate(18deg); opacity:.9; } 50% { opacity:0; } 100% { opacity:0; } }
+
+        /* Hero assembly styles */
+        .hero-assembly { position: relative; min-height: 88vh; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+        .hero-stage { position:relative; width:100%; max-width:1100px; height:520px; display:flex; align-items:center; justify-content:center; }
+        .hero-title { position:absolute; top:8%; left:50%; transform:translateX(-50%); z-index:40; text-align:center; }
+        .hero-title h1 { font-size:clamp(2.4rem,4vw,4.5rem); line-height:1; }
+        .hero-canvas { position:relative; width:100%; height:100%; }
+        .hero-particle { position:absolute; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:16px; will-change:transform,opacity; transition: transform 700ms cubic-bezier(.2,.8,.2,1), opacity 500ms; opacity:0; }
+        .hero-assembled .hero-particle { opacity:1; }
+        .hero-heart-glow { position:absolute; width:60%; height:60%; left:20%; top:20%; border-radius:50%; filter: blur(30px); background: radial-gradient(circle at 50% 40%, rgba(225,29,72,0.25), rgba(244,114,182,0.06)); pointer-events:none; z-index:30; opacity:0; transition:opacity 600ms; }
+        .hero-assembled .hero-heart-glow { opacity:1; }
+
+        /* Background floating emojis */
+        .bg-emoji { position:absolute; font-size:20px; opacity:0.12; pointer-events:none; transform-origin:center; }
+        @keyframes floatUp {
+            0% { transform: translateY(20vh) translateX(0) rotate(0deg); opacity:0; }
+            10% { opacity:0.9; }
+            100% { transform: translateY(-30vh) translateX(var(--tx,0px)) rotate(360deg); opacity:0; }
+        }
+        /* Romantic bokeh overlay + shimmer for CTA */
+        .bokeh{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+        .bokeh span{position:absolute; width:120px; height:120px; border-radius:9999px; background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.5), rgba(255,255,255,0) 60%); filter:blur(10px); opacity:.06; animation: floatUp 22s linear infinite}
+        .shimmer{position:relative}
+        .shimmer::after{content:""; position:absolute; inset:0; background:linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); background-size:200% 200%; animation: shimmer 3s infinite; border-radius:inherit; mix-blend-mode:screen; pointer-events:none}
+    </style>
+</head>
+<body class="romance-bg min-h-screen text-white overflow-x-hidden">
+    <a class="skip-link" href="#home">İçeriğe geç</a>
+    
+    <!-- Premium overlays -->
+    <div class="vignette" aria-hidden="true"></div>
+    <div id="cursor-aura" aria-hidden="true"></div>
+    <!-- Petals overlay for elegant romantic vibe -->
+    <div class="petals" aria-hidden="true"></div>
+    <div class="bokeh" aria-hidden="true"></div>
+
+
+        <!-- Hero: Zarif başlık ve görselle modern giriş -->
+    <section id="home" class="relative pt-28 pb-20">
+        <div class="container relative">
+            <span class="ring" style="width:380px;height:380px;left:-140px;top:-40px"></span>
+            <div class="grid md:grid-cols-2 items-center gap-10">
+                <div class="space-y-6">
+                    <h1 class="section-title text-5xl md:text-6xl foil-text">Aşkımızın Hikayesi</h1>
+                    <p class="text-pink-100 text-lg md:text-xl max-w-xl">İki kalbin aynı ritimde attığı, her gün yeniden yazılan bir masal. Bu sayfa, anılarımızı ve hayallerimizi zarif bir dille bir araya getiriyor.</p>
+                    <p class="text-pink-200 italic">"Seninle her kare, kalbime işlenen bir şiir."</p>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="#hikaye" class="btn btn-premium magnetic shimmer">Hikayemizi Oku</a>
+                        <a href="#galeri" class="btn btn-ghost magnetic">Galeriye Git</a>
+                    </div>
+                    <div class="flex gap-3 text-sm text-pink-200 pt-2">
+                        <span class="glass px-3 py-1 rounded-xl">Birlikte • 2025'ten beri</span>
+                        <span class="glass px-3 py-1 rounded-xl">Anılar • Sonsuz</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="card-premium p-3 md:p-4 max-w-md mx-auto" data-tilt>
+                        <img class="rounded-2xl w-full h-[320px] object-cover" src="./webp/1.webp" alt="Aşkımızı anlatan zarif bir görsel" decoding="async" fetchpriority="high" sizes="(min-width: 768px) 50vw, 100vw" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Hikayemiz Bölümü -->
+        <section id="hikaye" class="py-20 relative">
+            <div class="max-w-4xl mx-auto px-6 scroll-reveal">
+                <div class="card-premium p-8 md:p-10 flex flex-col md:flex-row items-center gap-10" data-tilt>
+                <div class="flex-1 flex justify-center">
+                    <img src="./webp/2.webp" alt="Hikayemiz" class="rounded-3xl shadow-2xl w-64 h-64 object-cover object-center border-4 border-white/20 bg-white/10" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="section-title text-4xl mb-2 luxury-text">Hikayemiz</h2>
+                    <div class="heart-rule"></div>
+                    <p class="text-xl text-pink-100 mb-4">Bir tesadüf, bir gülümseme ve iki kalbin buluşmasıyla başladı her şey. O günden beri her anımız, birlikte yazdığımız eşsiz bir masal oldu. Seninle hayat, her gün yeniden başlıyor.</p>
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-6">
+                        <span class="bg-pink-600/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium">Birlikte 6 ay</span>
+                        <span class="bg-pink-600/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium">Sonsuz anı</span>
+                        <span class="bg-pink-600/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium">Bir ömür yolculuk</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hayallerimiz Bölümü -->
+        <section id="hayaller" class="py-20 relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-10 scroll-reveal">
+                    <h2 class="section-title text-4xl mb-2 luxury-text">Hayallerimiz</h2>
+                    <p class="text-xl text-pink-100 max-w-2xl mx-auto">Birlikte gerçekleştirmek istediğimiz hayaller ve planlar...</p>
+                    <div class="heart-rule"></div>
+                </div>
+                <div class="relative">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Dünyayı Keşfetmek -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Dünyayı Keşfetmek">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/21.webp" alt="Birlikte dünyayı keşfeden romantik çift" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-earth-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Hayalimiz</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Dünyayı Keşfetmek</h3>
+                                <p class="text-pink-100 opacity-90">Yeni şehirler, ülkeler ve kültürleri el ele keşfetmek.</p>
+                            </div>
+                        </div>
+
+                        <!-- Sıcak Bir Yuva -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Sıcak Bir Yuva">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/22.webp" alt="Sıcak ve sevgi dolu bir yuvada romantik an" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-home-heart-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Hayalimiz</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Sıcak Bir Yuva</h3>
+                                <p class="text-pink-100 opacity-90">Huzurlu ve sevgi dolu bir evde birlikte yaşamak.</p>
+                            </div>
+                        </div>
+
+                        <!-- Birlikte Şarkı Söylemek -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Birlikte Şarkı Söylemek">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/23.webp" alt="Birlikte şarkı söyleyen ve dans eden çift" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-music-2-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Ritmime Eşlik Et</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Birlikte Şarkı Söylemek</h3>
+                                <p class="text-pink-100 opacity-90">Sevdiğimiz şarkılarda birlikte dans edip gülmek.</p>
+                            </div>
+                        </div>
+
+                        <!-- Anılar Biriktirmek -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Anılar Biriktirmek">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/24.webp" alt="Birlikte fotoğraf çeken romantik çift" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-camera-3-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Hatıra</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Anılar Biriktirmek</h3>
+                                <p class="text-pink-100 opacity-90">Her anı ölümsüzleştirmek için bol bol fotoğraf ve video.</p>
+                            </div>
+                        </div>
+
+                        <!-- Sağlıklı ve Mutlu Gelecek -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Sağlıklı ve Mutlu Bir Gelecek">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/25.webp" alt="Güneş doğarken koşan mutlu çift" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-heart-pulse-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Gelecek</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Sağlıklı ve Mutlu Bir Gelecek</h3>
+                                <p class="text-pink-100 opacity-90">Birlikte sağlıklı, huzurlu ve dengeli bir yaşam.</p>
+                            </div>
+                        </div>
+
+                        <!-- Birlikte Yaşlanmak -->
+                        <div class="dream-card card-premium relative overflow-hidden rounded-3xl group hover:shadow-2xl transition-all duration-500 scroll-reveal" data-tilt aria-label="Birlikte Yaşlanmak">
+                            <div class="glow-ring" aria-hidden="true"></div>
+                            <img src="./webp/26.webp" alt="Gün batımında el ele yürüyen yaşlı çift" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div class="absolute top-4 left-4 flex items-center gap-2">
+                                <span class="badge-icon bg-white/90 text-pink-600"><i class="ri-star-smile-line text-lg"></i></span>
+                                <span class="glass px-3 py-1 rounded-full text-[11px] text-pink-100">Bir Ömür</span>
+                            </div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="font-serif text-2xl font-bold">Birlikte Yaşlanmak</h3>
+                                <p class="text-pink-100 opacity-90">Yıllar geçse de el ele, aynı kalp atışında.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    /* Hayallerimiz – görsel, romantik kart stilleri */
+                    #hayaller .dream-card{height:16rem}
+                    @media(min-width:768px){#hayaller .dream-card{height:18rem}}
+                    #hayaller .badge-icon{width:36px;height:36px;border-radius:9999px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+                    #hayaller .dream-card .glow-ring{position:absolute;inset:-2px;border-radius:inherit;background:
+                        radial-gradient(60% 60% at 30% 20%, rgba(225,29,72,.18), transparent 40%),
+                        radial-gradient(60% 60% at 70% 80%, rgba(244,114,182,.14), transparent 40%);
+                        opacity:0;transition:opacity .4s}
+                    #hayaller .dream-card:hover .glow-ring{opacity:1}
+                </style>
+            </div>
+        </section>
+        <!-- Sana Özel Mesajım (Animasyonlu Zarf) -->
+    <section id="mesaj" class="py-20 relative">
+            <div class="max-w-3xl mx-auto px-6 flex flex-col items-center">
+                <div class="envelope-container mb-8 scroll-reveal">
+                    <div class="envelope-stage flex flex-col items-center">
+                        <button type="button" class="envelope-pro" aria-expanded="false" aria-controls="love-letter" title="Mesajı aç/kapat">
+                            <span class="envelope-shadow" aria-hidden="true"></span>
+                            <span class="envelope-body-pro" aria-hidden="true"></span>
+                            <span class="envelope-flap-pro" aria-hidden="true"></span>
+                            <span class="wax-seal" aria-hidden="true"><i class="ri-heart-fill"></i></span>
+                            <span class="shine" aria-hidden="true"></span>
+                            <div id="love-letter" class="love-letter" role="region" aria-label="Sevgi mesajı">
+                                <div class="font-serif text-2xl md:text-3xl text-pink-900 italic handwrite text-center">
+                                    Seninle her günüm bir mucize.<br>
+                                    İyi ki varsın, iyi ki benimlesin.<br>
+                                    <span class='text-pink-500 font-bold'>Seni çok seviyorum!</span>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="text-pink-200 mt-4 text-lg font-medium">Tıkla ve mesajı oku!</div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                /* Professional envelope component */
+                .envelope-stage{perspective:1200px}
+                .envelope-pro{position:relative;width:260px;height:170px;border-radius:18px;background:transparent;border:none;cursor:pointer;outline:none;transform-style:preserve-3d;transition:transform .4s ease, box-shadow .4s ease;box-shadow:0 12px 34px rgba(0,0,0,.22)}
+                .envelope-pro:focus-visible{box-shadow:0 0 0 3px rgba(225,29,72,.5), 0 12px 34px rgba(0,0,0,.22)}
+                @media(min-width:768px){.envelope-pro{width:300px;height:190px}}
+                /* Paper body */
+                .envelope-body-pro{position:absolute;left:0;right:0;bottom:0;height:68%;border-radius:0 0 16px 16px;background:
+                    linear-gradient(180deg,#fff,#fef7fb 40%,#fde8f1);
+                    border:1px solid rgba(0,0,0,.06);box-shadow: inset 0 1px 0 rgba(255,255,255,.6)}
+                /* Flap */
+                .envelope-flap-pro{position:absolute;left:0;right:0;top:0;height:54%;border-radius:16px 16px 0 0;background:
+                    linear-gradient(135deg,#e11d48 20%,#f472b6 60%,#fbbf24 120%);
+                    transform-origin:top center;transform:rotateX(0deg);transition:transform .7s cubic-bezier(.2,.8,.2,1);box-shadow: inset 0 -2px 0 rgba(0,0,0,.06)}
+                /* Wax seal */
+                .wax-seal{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:9999px;background:radial-gradient(circle at 30% 30%, #ff7a95, #e11d48 60%, #7f1d1d 100%);box-shadow:0 6px 14px rgba(225,29,72,.35), inset 0 2px 4px rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;color:#fff;z-index:3;transition:transform .45s ease, opacity .45s ease}
+                .wax-seal i{font-size:22px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
+                /* Shine */
+                .shine{position:absolute;inset:0;border-radius:18px;background:linear-gradient(120deg,rgba(255,255,255,.22),rgba(255,255,255,0) 30%);mix-blend-mode:screen;opacity:.45;pointer-events:none}
+                /* Shadow */
+                .envelope-shadow{position:absolute;left:10%;right:10%;bottom:-10px;height:22px;background:radial-gradient(closest-side, rgba(0,0,0,.3), rgba(0,0,0,0));filter:blur(8px);transform:translateZ(-1px);}
+                /* Letter */
+                .love-letter{position:absolute;left:50%;top:54%;transform:translate(-50%,-10px) scale(.96);width:84%;min-height:56%;background:#fff;border-radius:14px;border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 24px rgba(0,0,0,.18);opacity:0;transition:transform .6s cubic-bezier(.2,.8,.2,1), opacity .6s ease;padding:14px;display:flex;align-items:center;justify-content:center;z-index:2}
+                .handwrite{font-family:'Dancing Script', cursive, 'Playfair Display', serif; letter-spacing:.5px}
+                /* Open state */
+                .envelope-pro.open .envelope-flap-pro{transform:rotateX(-150deg)}
+                .envelope-pro.open .love-letter{opacity:1;transform:translate(-50%,-36px) scale(1.02)}
+                .envelope-pro.open .wax-seal{opacity:0;transform:translate(-50%,-68%) scale(.8)}
+                .envelope-pro:hover{transform:translateY(-2px)}
+            </style>
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+            <script>
+                // Envelope toggle with ARIA + keyboard support
+                (function(){
+                    const section = document.getElementById('mesaj');
+                    const btn = section ? section.querySelector('.envelope-pro') : null;
+                    if(!btn) return;
+                    function toggle(){
+                        const open = btn.classList.toggle('open');
+                        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    }
+                    btn.addEventListener('click', toggle);
+                    btn.addEventListener('keydown', (e)=>{
+                        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+                    });
+                })();
+            </script>
+    </section>
+
+        <!-- Playlist ve Müzik Kontrolü -->
+    <section id="muzik" class="py-16 relative">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title text-3xl mb-2 luxury-text">Bize Özel Playlist</h2>
+                    <div class="heart-rule mx-auto"></div>
+                    <p class="text-pink-100 mb-6">Birlikte dinlediğimiz en özel şarkılar. Oynat ve ruhumuz eşlik etsin.</p>
+                </div>
+
+                <div class="card-premium p-5 md:p-6 w-full" data-tilt>
+                    <div class="flex flex-wrap items-center gap-3 md:gap-4">
+                        <div class="flex items-center gap-2">
+                            <button id="prevBtn" class="btn btn-ghost px-3 py-2" aria-label="Önceki parça"><i class="ri-skip-back-line"></i></button>
+                            <button id="playPauseBtn" class="btn btn-premium px-4 py-2" aria-label="Oynat/Duraklat"><i class="ri-play-fill"></i></button>
+                            <button id="nextBtn" class="btn btn-ghost px-3 py-2" aria-label="Sonraki parça"><i class="ri-skip-forward-line"></i></button>
+                        </div>
+                        <div class="flex-1 min-w-full sm:min-w-[300px]">
+                            <div id="trackTitle" class="font-medium truncate hidden">-</div>
+                            <div class="flex items-center gap-2 mt-2 w-full">
+                                <span id="currentTime" class="text-xs text-pink-200 w-10 text-right shrink-0">0:00</span>
+                                <input type="range" id="seek" min="0" max="100" value="0" class="flex-1 accent-pink-500" aria-label="Zaman çubuğu">
+                                <span id="duration" class="text-xs text-pink-200 w-10 shrink-0">0:00</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 ml-auto sm:ml-0">
+                            <i class="ri-volume-up-line text-pink-200"></i>
+                            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.9" class="w-24 sm:w-20 accent-pink-500" aria-label="Ses">
+                        </div>
+                    </div>
+                    <audio id="player" preload="auto"></audio>
+                </div>
+
+                
+
+                <style>
+                    /* Player polish */
+                    #muzik .btn{min-height:40px}
+                    @media (max-width: 640px){
+                        #muzik .card-premium{padding:14px}
+                    }
+                    #muzik input[type="range"]{appearance:none;height:4px;border-radius:9999px;background:linear-gradient(90deg, rgba(225,29,72,.8) 0%, rgba(251,191,36,.7) 60%, rgba(255,255,255,.4) 100%)}
+                    #muzik input[type="range"]::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border-radius:9999px;background:#fff;border:2px solid rgba(225,29,72,.9);box-shadow:0 2px 8px rgba(225,29,72,.35)}
+                    #muzik input[type="range"]::-moz-range-thumb{width:14px;height:14px;border-radius:9999px;background:#fff;border:2px solid rgba(225,29,72,.9);box-shadow:0 2px 8px rgba(225,29,72,.35)}
+                </style>
+
+                <script>
+                    (function(){
+                        const audio = document.getElementById('player');
+                        const playBtn = document.getElementById('playPauseBtn');
+                        const prevBtn = document.getElementById('prevBtn');
+                        const nextBtn = document.getElementById('nextBtn');
+                        const seek = document.getElementById('seek');
+                        const vol = document.getElementById('volume');
+                        const titleEl = document.getElementById('trackTitle');
+                        const curEl = document.getElementById('currentTime');
+                        const durEl = document.getElementById('duration');
+                        const listEl = document.getElementById('playlist');
+                        const STORAGE_KEY = 'lovePlayerState';
+
+                      const playlist = [
+                     { file: "sarki1.mp3", title: "Bizim Şarkımız ❤️" }
+                    ];
+                        let index = 0;
+                        function srcFor(name){ return '../playlist/' + encodeURIComponent(name); }
+                        function fmt(t){ if(!isFinite(t)) return '0:00'; const m=Math.floor(t/60), s=Math.floor(t%60); return m+":"+(s<10?'0'+s:s); }
+                        function setIconPlaying(isPlaying){
+                            playBtn.innerHTML = isPlaying ? '<i class="ri-pause-fill"></i>' : '<i class="ri-play-fill"></i>';
+                        }
+                        function load(i){
+                            index = (i+playlist.length)%playlist.length;
+                            const track = playlist[index];
+                            audio.src = srcFor(track.file);
+                            audio.load();
+                            titleEl.textContent = track.title || track.file;
+                            seek.value = 0; curEl.textContent = '0:00'; durEl.textContent = '0:00';
+                            // Highlight selected in list (if present)
+                            if(listEl){
+                                listEl.querySelectorAll('[data-index]').forEach(li=> li.classList.remove('ring','ring-rose-500'));
+                                const active = listEl.querySelector(`[data-index="${index}"]`);
+                                if(active){ active.classList.add('ring','ring-rose-500'); }
+                            }
+                        }
+                        function play(){ audio.play().then(()=> setIconPlaying(true)).catch(()=>{
+                            // Autoplay engellendiyse butonu vurgula
+                            playBtn.classList.add('animate-pulse-slow');
+                        }); }
+                        function pause(){ audio.pause(); setIconPlaying(false); playBtn.classList.remove('animate-pulse-slow'); }
+                        // Initial volume from slider
+                        if(vol){ audio.volume = Number(vol.value); }
+
+                        // Persist player state across pages
+                        function saveState(){
+                            try{
+                                const state = {
+                                    v:1,
+                                    index,
+                                    file: playlist[index]?.file,
+                                    title: playlist[index]?.title,
+                                    currentTime: audio.currentTime || 0,
+                                    paused: audio.paused,
+                                    volume: audio.volume,
+                                    updatedAt: Date.now()
+                                };
+                                localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+                            }catch(e){}
+                        }
+                        function loadSavedState(){
+                            try{
+                                const raw = localStorage.getItem(STORAGE_KEY);
+                                if(!raw) return null;
+                                return JSON.parse(raw);
+                            }catch(e){ return null; }
+                        }
+
+                        // Events
+                        playBtn.addEventListener('click', ()=>{ audio.paused ? play() : pause(); saveState(); });
+                        prevBtn.addEventListener('click', ()=>{ load(index-1); play(); });
+                        nextBtn.addEventListener('click', ()=>{ load(index+1); play(); });
+                        vol?.addEventListener('input', ()=>{ audio.volume = Number(vol.value); saveState(); });
+                        seek.addEventListener('input', ()=>{ if(audio.duration) audio.currentTime = audio.duration * (seek.value/100); });
+                        audio.addEventListener('timeupdate', ()=>{
+                            if(audio.duration){ seek.value = (audio.currentTime / audio.duration) * 100; }
+                            curEl.textContent = fmt(audio.currentTime);
+                            // save progress occasionally
+                            saveState();
+                        });
+                        audio.addEventListener('loadedmetadata', ()=>{ durEl.textContent = fmt(audio.duration); });
+                        audio.addEventListener('ended', ()=>{
+                            if(playlist.length > 1){ load(index+1); play(); }
+                            else { audio.currentTime = 0; play(); }
+                            saveState();
+                        });
+
+                        // Build/refresh list UI from playlist
+                        function rebuildList(){
+                            if(!listEl) return;
+                            listEl.innerHTML = '';
+                            playlist.forEach((t, i)=>{
+                                const li = document.createElement('li');
+                                li.className = 'card glass p-3 flex items-center justify-between gap-3 cursor-pointer hover:bg-white/10 transition';
+                                li.dataset.index = i;
+                                li.innerHTML = `<span class=\"truncate\">${t.title || t.file}</span><span class=\"text-xs text-pink-300\">Yerel</span>`;
+                                li.addEventListener('click', ()=>{ load(i); play(); });
+                                listEl.appendChild(li);
+                            });
+                        }
+
+                        rebuildList();
+                        // Try resume from saved state (same playlist)
+                        const saved = loadSavedState();
+                        if(saved && saved.file){
+                            const found = playlist.findIndex(t=> t.file === saved.file);
+                            if(found >= 0){
+                                load(found);
+                                audio.currentTime = saved.currentTime || 0;
+                                if(typeof saved.volume === 'number'){ audio.volume = saved.volume; if(vol) vol.value = String(saved.volume); }
+                                if(saved.paused){ pause(); } else { play(); }
+                            } else {
+                                load(0);
+                            }
+                        } else {
+                            load(0);
+                        }
+                        // Update icon on native play/pause, handle errors
+                        audio.addEventListener('play', ()=> { setIconPlaying(true); saveState(); });
+                        audio.addEventListener('pause', ()=> { setIconPlaying(false); saveState(); });
+                        audio.addEventListener('error', ()=>{
+                            titleEl.textContent = 'Dosya yüklenemedi. Yol: ' + decodeURIComponent(audio.src.split('/').slice(-1)[0]);
+                            setIconPlaying(false);
+                            saveState();
+                        });
+                        // Try autoplay immediately, add user-gesture fallback
+                        function attemptAutoplay(){
+                            audio.play().then(()=>{
+                                setIconPlaying(true);
+                                playBtn.classList.remove('animate-pulse-slow');
+                            }).catch(()=>{
+                                playBtn.classList.add('animate-pulse-slow');
+                                const resume = ()=>{
+                                    audio.play().finally(()=>{
+                                        playBtn.classList.remove('animate-pulse-slow');
+                                        window.removeEventListener('pointerdown', resume);
+                                        saveState();
+                                    });
+                                };
+                                window.addEventListener('pointerdown', resume, { once:true });
+                                const onVis = ()=>{ if(!document.hidden){ audio.play().finally(()=>{}); document.removeEventListener('visibilitychange', onVis); } };
+                                document.addEventListener('visibilitychange', onVis);
+                            });
+                        }
+                        attemptAutoplay();
+                        window.addEventListener('beforeunload', saveState);
+                    })();
+                </script>
+            </div>
+        </section>
+
+
+    <section id="anilar" class="py-24 relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="text-center mb-20 scroll-reveal">
+                    <h2 class="section-title text-5xl mb-2 luxury-text">Özel Anılarımız</h2>
+                    <div class="heart-rule"></div>
+                    <p class="text-xl text-pink-100 max-w-2xl mx-auto">Aşkımızın kilometre taşları ve unutulmaz anlarımız.</p>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/80 to-secondary/30 rounded-full -translate-x-1/2 hidden md:block"></div>
+                    <div class="space-y-16">
+                        <!-- Timeline item 1 -->
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-end md:pr-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/3.webp" alt="İlk Karşılaşma" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-start md:pl-8">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide">valaha ocak ayı </span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">İlk Karşılaşma</h3>
+                                <p class="text-pink-100 text-lg mb-2">O soğuk kış ve karla karışııkyagmur gecesinde gözlerine bakarak zamanın durduğu an...</p>
+                            </div>
+                        </div>
+                        <!-- Timeline item 2 -->
+                        <div class="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-start md:pl-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/4.webp" alt="İlk Randevu" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-end md:pr-8 text-right">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide">14 temmuz 2025</span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">İlk Randevu</h3>
+                                <p class="text-pink-100 text-lg mb-2">Nehir kenarında yürürken ellerimiz ilk kez birleşti. Gün batımının altın ışıkları arasında, aşkımızın temelleri atıldı...</p>
+                            </div>
+                        </div>
+                        <!-- Timeline item 3 -->
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-end md:pr-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/5.webp" alt="Yıldönümümüz" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-start md:pl-8">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide">Ayda bir</span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">Yıldönümümüz</h3>
+                                <p class="text-pink-100 text-lg mb-2">Her ay, birlikte geçirdiğimiz zamanı, birlikte yaşadığımız anları, birlikte hissettiğimiz duyguları...</p>
+                            </div>
+                        </div>
+                        <!-- Timeline item 4 -->
+                        <div class="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-start md:pl-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/6.webp" alt="İlk Seyahatimiz" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-end md:pr-8 text-right">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide">İnşallah bir gün </span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">İlk Seyahatimiz</h3>
+                                <p class="text-pink-100 text-lg mb-2">İlk gitmek istediğiz yer neresi olur bilmiyorum ama balayı olsun heheheh</p>
+                            </div>
+                        </div>
+                        <!-- Timeline item 5 -->
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-end md:pr-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/7.webp" alt="Sessiz Anlar" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-start md:pl-8">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide"></span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">Sessiz Anlar</h3>
+                                <p class="text-pink-100 text-lg mb-2">sessiz ya hani hehe yazmadım bir şey hehe</p>
+                            </div>
+                        </div>
+                        <!-- Timeline item 6 -->
+                        <div class="flex flex-col md:flex-row-reverse items-center md:items-start gap-8 group scroll-reveal">
+                            <div class="md:w-1/2 w-full flex justify-start md:pl-8">
+                                <div class="card-premium overflow-hidden photo-hover w-full max-w-md" data-tilt>
+                                    <img src="./webp/8.webp" alt="Yıldızlar Altında" class="w-full h-56 object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" />
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 w-full flex flex-col items-end md:pr-8 text-right">
+                                <span class="text-sm text-pink-200 mb-2 font-semibold tracking-wide"></span>
+                                <h3 class="font-serif text-3xl font-bold mb-2 text-pink-100">Yıldızlar Altında</h3>
+                                <p class="text-pink-100 text-lg mb-2">Gece yarısı, yıldızların altında dans ederken, evrenin bize gülümsediğini hissettim. Sen ve ben, sonsuzluk...</p>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </section>
+    <section id="galeri" class="py-24 relative overflow-hidden">
+            
+            <div class="max-w-6xl mx-auto px-4 relative z-10">
+                <div class="text-center mb-20 scroll-reveal">
+                    <h2 class="font-serif text-5xl font-bold mb-4 luxury-text">Fotoğraf Albümümüz</h2>
+                    <p class="text-xl text-pink-100 max-w-2xl mx-auto">Her fotoğraf bir hikaye, her karede aşkın izleri...</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-16">
+                    <!-- Fotoğraf kartları -->
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/27.webp')">
+                        <img src="./webp/27.webp" alt="Aşk Fotoğrafı 1" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Birlikte Portre</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/28.webp')">
+                        <img src="./webp/28.webp" alt="Aşk Fotoğrafı 2" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Birlikte Kahkaha</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/29.webp')">
+                        <img src="./webp/29.webp" alt="Aşk Fotoğrafı 3" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">El Ele</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/30.webp')">
+                        <img src="./webp/30.webp" alt="Aşk Fotoğrafı 4" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Gün Batımı</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/31.webp')">
+                        <img src="./webp/31.webp" alt="Aşk Fotoğrafı 5" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">İlk Öpücük</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/32.webp')">
+                        <img src="./webp/32.webp" alt="Aşk Fotoğrafı 6" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Birlikte Yürüyüş</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/33.webp')">
+                        <img src="./webp/33.webp" alt="Aşk Fotoğrafı 7" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Sıcak Sarılma</span>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden card-premium cursor-pointer photo-hover transition-all duration-300 hover:scale-105" data-tilt onclick="openLightbox('./webp/34.webp')">
+                        <img src="./webp/34.webp" alt="Aşk Fotoğrafı 8" class="w-full h-72 object-cover" loading="lazy" decoding="async" sizes="(min-width:1024px) 25vw, (min-width:768px) 33vw, 50vw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
+                            <span class="text-white text-lg font-semibold">Dans</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-premium rounded-3xl p-12 text-center scroll-reveal mt-12 overflow-hidden" data-tilt>
+                    <h3 class="font-serif text-4xl font-bold mb-6 luxury-text">Sonsuz Aşk Koleksiyonu</h3>
+                    <p class="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">Her fotoğraf, aşkımızın bir parçası. Her an, kalbimizde sonsuza dek yaşayacak bir hazine...</p>
+                    <a class="btn-premium px-6 md:px-10 py-4 text-base md:text-lg font-medium whitespace-normal md:whitespace-nowrap flex items-center justify-center w-full sm:w-auto mx-auto magnetic" href="./galeri.html">Tüm Fotoğrafları Görüntüle</a>
+                </div>
+                <!-- Lightbox -->
+                <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+                    <div class="relative max-w-3xl w-full p-4">
+                        <img id="lightbox-img" src="" alt="Büyük Fotoğraf" class="rounded-2xl shadow-2xl w-full max-h-[80vh] object-contain border-4 border-white/20" />
+                        <button onclick="closeLightbox()" class="absolute top-4 right-4 bg-white/80 hover:bg-white text-primary rounded-full p-2 shadow-lg text-2xl font-bold">&times;</button>
+                    </div>
+                </div>
+                <script>
+                    function openLightbox(src) {
+                        document.getElementById('lightbox-img').src = src;
+                        document.getElementById('lightbox').classList.remove('hidden');
+                    }
+                    function closeLightbox() {
+                        document.getElementById('lightbox').classList.add('hidden');
+                        document.getElementById('lightbox-img').src = '';
+                    }
+                    document.addEventListener('keydown', function(e) {
+                        if(e.key === 'Escape') closeLightbox();
+                    });
+                </script>
+        </section>
+            <section id="siir" class="py-28 relative overflow-hidden">
+                
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <div class="mb-12 flex flex-col items-center">
+                    <svg width="80" height="80" viewBox="0 0 160 140" fill="none" class="mb-6 heart-beat"><defs><linearGradient id="poemHeart" x1="0" y1="0" x2="160" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#e11d48"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs><path d="M80 130s-60-36-60-78c0-24 18-38 38-38 14 0 22 8 22 8s8-8 22-8c20 0 38 14 38 38 0 42-60 78-60 78z" fill="url(#poemHeart)"/></svg>
+                    <h2 class="section-title text-5xl md:text-6xl mb-2 luxury-text drop-shadow-lg">Aşkımızın Şiiri</h2>
+                    <div class="heart-rule"></div>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-4"></div>
+                </div>
+                <div class="relative">
+                    <div class="card-premium px-8 py-12 md:px-16 md:py-16 mx-auto max-w-2xl scroll-reveal" data-tilt>
+                        <blockquote class="text-2xl md:text-3xl font-light leading-relaxed text-pink-100 italic animate-fade-in">
+                            <span class="block mb-4">"Senin gözlerinde buldum kendimi,<br>
+                            Senin sesinde duydum kalbimi,<br>
+                            Senin ellerinde hissettim sonsuzluğu,<br>
+                            Senin aşkında yaşıyorum mutluluğu.</span>
+                            <span class="block mb-4">
+                            Her gün seninle yeni bir başlangıç,<br>
+                            Her gece seninle tatlı bir rüya,<br>
+                            Aşkımız zamanı aşan bir hikaye,<br>
+                            Sonsuza dek sürecek bu büyülü dünya."
+                            </span>
+                        </blockquote>
+                        <div class="mt-10 text-pink-300 font-medium text-lg tracking-wide">- Kalbimizden, Aşkımıza -</div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes fade-in {
+                    0% { opacity: 0; transform: translateY(40px); }
+                    100% { opacity: 1; transform: translateY(0); }
+                }
+                .animate-fade-in {
+                    animation: fade-in 1.5s cubic-bezier(0.4,0,0.2,1) both;
+                }
+                @keyframes pulse-slow {
+                    0%, 100% { opacity: 0.1; }
+                    50% { opacity: 0.2; }
+                }
+                .animate-pulse-slow {
+                    animation: pulse-slow 8s ease-in-out infinite;
+                }
+            </style>
+        </section>
+
+
+            <footer id="son" class="py-24 relative overflow-hidden">
+                
+            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+                <div class="mb-10 flex flex-col items-center">
+                    <svg width="120" height="110" viewBox="0 0 160 140" fill="none" class="mb-8 heart-beat"><defs><linearGradient id="eternalHeart" x1="0" y1="0" x2="160" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#e11d48"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs><path d="M80 130s-60-36-60-78c0-24 18-38 38-38 14 0 22 8 22 8s8-8 22-8c20 0 38 14 38 38 0 42-60 78-60 78z" fill="url(#eternalHeart)"/></svg>
+                    <h3 class="font-serif text-4xl md:text-5xl font-bold mb-4 luxury-text drop-shadow-lg">Sonsuza Dek</h3>
+                    <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mb-6"></div>
+                </div>
+                    <div class="card-premium px-8 py-10 md:px-16 md:py-12 mx-auto max-w-xl" data-tilt>
+                    <p class="text-xl md:text-2xl text-pink-100 mb-6 font-light">Bu hikaye daha yeni başlıyor. En güzel sayfalar henüz yazılmadı...</p>
+                    <div class="text-pink-200 text-base md:text-lg font-medium">Aşkımızın hikayesi devam ediyor... <span class="heart-beat">♥</span></div>
+                    <!-- Profesyonel sayaç başlangıcı -->
+                    <div class="mt-6 w-full max-w-lg mx-auto">
+                        <div class="glass rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                            <div class="text-center flex-1">
+                                <div class="text-3xl md:text-4xl font-semibold" id="lc-years">--</div>
+                                <div class="text-xs text-pink-200 mt-1">Yıl</div>
+                            </div>
+                            <div class="h-12 w-px bg-white/10 hidden md:block"></div>
+                            <div class="text-center flex-1">
+                                <div class="text-3xl md:text-4xl font-semibold" id="lc-days">--</div>
+                                <div class="text-xs text-pink-200 mt-1">Gün</div>
+                            </div>
+                            <div class="h-12 w-px bg-white/10 hidden md:block"></div>
+                            <div class="text-center flex-1">
+                                <div class="text-2xl md:text-3xl font-mono font-semibold" id="lc-time">--:--:--</div>
+                                <div class="text-xs text-pink-200 mt-1">Saat : Dakika : Saniye</div>
+                            </div>
+                        </div>
+                        <div class="text-center text-xs text-pink-300 mt-2">Başlangıç: <span class="font-medium">6 temmuz 2025</span></div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes pulse-slow {
+                    0%, 100% { opacity: 0.1; }
+                    50% { opacity: 0.2; }
+                }
+                .animate-pulse-slow {
+                    animation: pulse-slow 8s ease-in-out infinite;
+                }
+            </style>
+        </footer>
+
+    <script id="scroll-animations">
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- Petals generator -->
+    <script id="petals-generator">
+        document.addEventListener('DOMContentLoaded', function(){
+            const root = document.querySelector('.petals');
+            if(!root) return;
+            function drop(){
+                const el = document.createElement('span');
+                el.className = 'petal';
+                const startX = Math.random() * window.innerWidth;
+                const drift = (Math.random()*120 - 60);
+                el.style.left = startX + 'px';
+                el.style.top = '-20px';
+                el.style.setProperty('--x', drift + 'px');
+                el.style.animationDuration = (8 + Math.random()*6) + 's';
+                el.style.animationDelay = (Math.random()*2) + 's';
+                root.appendChild(el);
+                setTimeout(()=> el.remove(), 16000);
+            }
+            const timer = setInterval(drop, 400);
+            window.addEventListener('beforeunload', ()=> clearInterval(timer));
+        });
+    </script>
+    <script id="premium-interactions">
+        // Cursor aura follow
+        const aura = document.getElementById('cursor-aura');
+        window.addEventListener('mousemove', (e)=>{
+            if(!aura) return;
+            aura.style.left = e.clientX + 'px';
+            aura.style.top = e.clientY + 'px';
+        }, {passive:true});
+        // Simple tilt for [data-tilt]
+        document.querySelectorAll('[data-tilt]').forEach(el=>{
+            const max = 10;
+            function onMove(ev){
+                const r = el.getBoundingClientRect();
+                const cx = r.left + r.width/2;
+                const cy = r.top + r.height/2;
+                const dx = (ev.clientX - cx) / (r.width/2);
+                const dy = (ev.clientY - cy) / (r.height/2);
+                el.style.transform = `rotateY(${dx*max}deg) rotateX(${-dy*max}deg)`;
+            }
+            function reset(){ el.style.transform = 'rotateY(0) rotateX(0)'; }
+            el.addEventListener('mousemove', onMove);
+            el.addEventListener('mouseleave', reset);
+        });
+        // Magnetic buttons
+        document.querySelectorAll('.magnetic').forEach(btn=>{
+            const s = 18;
+            btn.addEventListener('mousemove', (ev)=>{
+                const r = btn.getBoundingClientRect();
+                const x = ((ev.clientX - r.left) / r.width - .5) * s;
+                const y = ((ev.clientY - r.top) / r.height - .5) * s;
+                btn.style.transform = `translate(${x}px, ${y}px)`;
+            });
+            btn.addEventListener('mouseleave', ()=>{ btn.style.transform = 'translate(0,0)'; });
+        });
+        // Populate bokeh bubbles
+        const bokeh = document.querySelector('.bokeh');
+        if(bokeh){
+            for(let i=0;i<12;i++){
+                const s = document.createElement('span');
+                s.style.left = Math.random()*100 + 'vw';
+                s.style.top = (60 + Math.random()*40) + 'vh';
+                s.style.setProperty('--tx', (Math.random()*120 - 60) + 'px');
+                s.style.animationDelay = (Math.random()*6) + 's';
+                s.style.animationDuration = (18 + Math.random()*12) + 's';
+                bokeh.appendChild(s);
+            }
+        }
+    </script>
+
+    <script id="smooth-interactions">
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            const photos = document.querySelectorAll('.photo-hover');
+            photos.forEach(photo => {
+                photo.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                photo.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+        });
+    </script>
+    <!-- Removed old hero assembly animation script to keep design clean -->
+    <!-- Analytics script removed for privacy -->
+    <script id="love-counter-script">
+        (function() {
+            const startDate = new Date(2025, 5, 6, 17, 29, 0);
+            const elYears = document.getElementById('lc-years');
+            const elDays = document.getElementById('lc-days');
+            const elTime = document.getElementById('lc-time');
+
+            function pad(n){ return n.toString().padStart(2,'0'); }
+
+            function animateChange(el, newText){
+                if (!el) return;
+                if (el.textContent === newText) return;
+                el.style.transition = 'transform 220ms cubic-bezier(.2,.8,.2,1), opacity 220ms';
+                el.style.transform = 'scale(1.05)';
+                el.style.opacity = '0.85';
+                setTimeout(()=>{
+                    el.textContent = newText;
+                    el.style.transform = 'scale(1)';
+                    el.style.opacity = '1';
+                }, 140);
+            }
+
+            function update() {
+                const now = new Date();
+                let diff = Math.floor((now - startDate) / 1000);
+                if (diff < 0) diff = 0;
+
+                const years = Math.floor(diff / (365.25*24*3600));
+                diff -= Math.floor(years * 365.25*24*3600);
+                const days = Math.floor(diff / (24*3600));
+                diff -= days * 24*3600;
+                const hours = Math.floor(diff / 3600);
+                diff -= hours * 3600;
+                const minutes = Math.floor(diff / 60);
+                const seconds = diff - minutes * 60;
+
+                animateChange(elYears, years > 0 ? years.toString() : '0');
+                animateChange(elDays, days.toString());
+                animateChange(elTime, pad(hours) + ':' + pad(minutes) + ':' + pad(seconds));
+            }
+
+            update();
+            setInterval(update, 1000);
+        })();
+    </script>
+    <a href="#home" class="back-to-top btn btn-ghost hide">Yukarı</a>
+    <script>
+        // Service worker registration for caching (faster repeat loads)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function(){
+                navigator.serviceWorker.register('./sw.js').catch(()=>{});
+            });
+        }
+        const backTop = document.querySelector('.back-to-top');
+        const onScroll = () => { if (window.scrollY > 200) backTop.classList.remove('hide'); else backTop.classList.add('hide'); };
+        document.addEventListener('scroll', onScroll, { passive: true });
+    </script>
+</body>
+</html>
